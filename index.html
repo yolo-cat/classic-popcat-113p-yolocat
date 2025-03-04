@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>POPCAT STU</title>
-</head>
-
-
-
-<!--容器 box 高度100vh flex排版方向column 水平置中 不要垂直置中-->
-<style>
-    .container {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        /*容器樣式 背景顏色 #bdaa90*/
-        background-color: #bdaa90;
-
-        /*標題 box 寬度80% 上方間距 2em*/
-        width: 80%;
-        margin-top: 2em;
-    }
-    /*文字 box 寬度100%*/
-    .cat-img {
-        width: 100%;
-        /*文字樣式 文字置中 文字白色 大小80px -webkit-text-stroke 3px 黑色*/
-        text-align: center;
-        color: white;
-        font-size: 80px;
-        -webkit-text-stroke: 3px black;
-        /*文字 div 背景圖片 用 id 設定imgs/p.png 圖片靠下 填滿容器contain 不重複*/
-        background-image: url(imgs/p.png);
-        background-position: bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
+    <title>POPCAT CLASSIC</title>
+    <style>
+        /* 1. 新增容器去包裹標題圖片與點擊數 */
+        /* 2. 容器 box 設定 100vh 高度，
+              flex 排版方向為 column，
+              水平置中 (不垂直置中) */
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #bdaa90; /* 3. 容器樣式 背景顏色 #bdaa90 */
         }
-</style>
 
+        /* 4. 標題 box 設定寬度 80%，上方間距 2em */
+        .title-box {
+            width: 80%;
+            margin-top: 2em;
+        }
+
+        /* 5. 文字 box 設定寬度 100% */
+        .text-box {
+            width: 100%;
+            text-align: center; /* 6. 文字置中 */
+            color: white; /* 7. 文字白色 */
+            font-size: 80px; /* 8. 文字大小 80px */
+            -webkit-text-stroke: 3px black; /* 9. 文字 -webkit-text-stroke 3px 黑色 */
+            background-image: url('imgs/p.png'); /* 10. 背景圖片用 id 設定 imgs/p.png */
+            background-position: bottom; /* 11. 圖片靠下 */
+            background-size: contain; /* 12. 填滿容器 contain */
+            background-repeat: no-repeat; /* 13. 不重複 */
+        }
+    </style>
+</head>
 <body>
-<!--新增容器去包裹標題圖片與點擊數-->
+<!-- 1. 容器包裹標題圖片與點擊數 -->
 <div class="container">
-<img class="title" src="imgs/popcat.svg" alt="POPCAT">
-<div class="cat-img" id="p">0</div>
+    <!-- 4. 標題圖片 -->
+    <img class="title-box" src="imgs/popcat.svg" alt="POPCAT">
+    <!-- 5-13. 點擊數顯示區域，應用各項文字與背景樣式 -->
+    <div class="text-box" id="p">0</div>
 </div>
 </body>
 </html>
