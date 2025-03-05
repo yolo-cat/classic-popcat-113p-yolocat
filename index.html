@@ -1,65 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>POPCAT CLASSIC</title>
-    <style>
-        /* I. body box 編距為0 */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif; /* III. 字型 sans-serif */
-            user-select: none; /* IV. 防止文字被選取 */
-        }
-
-        /* II. 新增容器去包裹標題圖片與點擊數 */
-        .container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #bdaa90; /* III. 容器樣式 背景顏色 #bdaa90 */
-        }
-
-        /* IV. 標題 box 設定寬度 80%，上方間距 2em，最大寬度 600px */
-        .title-box {
-            width: 80%;
-            max-width: 600px;
-            margin-top: 2em;
-        }
-
-        /* V. 文字 box 設定寬度 100%，最大寬度 800px */
-        .text-box {
-            width: 100%;
-            max-width: 800px;
-            text-align: center; /* VI. 文字置中 */
-            color: white; /* VII. 文字白色 */
-            font-size: 80px; /* VIII. 文字大小 80px */
-            -webkit-text-stroke: 3px black; /* IX. 文字 -webkit-text-stroke 3px 黑色 */
-            background-image: url('imgs/p.png'); /* X. 背景圖片用 id 設定 imgs/p.png */
-            background-position: bottom; /* XI. 圖片靠下 */
-            background-size: contain; /* XII. 填滿容器 contain */
-            background-repeat: no-repeat; /* XIII. 不重複 */
-            flex-grow: 1; /* II. 文字 div 排版填滿剩餘空間 */
-        }
-
-        /* XIV. 新增文字 div 背景圖片，用 id=op 設定 imgs/op.png */
-        #op {
-            background-image: url('imgs/op.png');
-            background-position: bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    </style>
 </head>
+
 <body>
-<!-- I. body box 編距為0 -->
-<div class="container">
-    <!-- IV. 標題圖片 -->
-    <img class="title-box" src="imgs/popcat.svg" alt="POPCAT">
-    <!-- V-XIII. 點擊數顯示區域，應用各項文字與背景樣式 -->
-    <div class="text-box" id="p">0</div>
-    <!-- XIV. 新增文字 div，應用 imgs/op.png 背景圖片 -->
-    <div class="text-box" id="op"></div>
-</div>
+<img class="title" src="imgs/popcat.svg" alt="POPCAT">
+<div class="cat-img" id="p">0</div>
 </body>
 </html>
