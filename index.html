@@ -1,21 +1,26 @@
 <html lang="en">
     <head>
         <title>POPCAT CLASSIC</title>
-        <!-- 容器 box，高度100vh，flex排版方向column，水平置中不要垂直置中 -->
+        <!-- 2. 容器 box，高度100vh，flex排版方向column，水平置中不要垂直置中 -->
         <style>
             .container {
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                /* 容器樣式 背景顏色 #bdaa90 */
+                /* 3. 容器樣式 背景顏色 #bdaa90 */
                 background-color: #bdaa90;
+            }
+            /* 4. 標題 box 寬度80% 上方間距 2em */
+            .title {
+                width: 80%;
+                margin-top: 2em;
             }
         </style>
     </head>
 
     <body>
-        <!-- 新增容器 div 去包裹標題圖片與點擊數 -->
+        <!-- 1. 新增容器 div 去包裹標題圖片與點擊數 -->
         <div class="container">
             <img class="title" src="imgs/popcat.svg" alt="POPCAT">
             <div class="cat-img" id="popcat">0</div>
